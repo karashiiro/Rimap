@@ -11,7 +11,7 @@ Create a channel called `#bot-stuff` for Rimap to post random data to.
 # Installation
 (WIP)
 
-If you want to host a copy of Rimap yourself, it's a little more involved. First, get a Bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/).
+If you want to host a copy of Rimap yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/).
 
 There's a fair number of commands to be run to install the node.js dependencies into your Rimap folder, listed below:
 
@@ -36,3 +36,13 @@ There's a fair number of commands to be run to install the node.js dependencies 
 `npm i winston`
 
 `npm i winston-daily-rotate-file`
+
+# Configuration
+
+`discord.prefix` is the command prefix.
+
+`discord.token` is your bot token.
+
+`discord.status_channel` is the channel you want Rimap to tell you random information in.
+
+`discord.mod_roles` is an array of roles that can use the administrative commands like `~bulkdelete` etc.

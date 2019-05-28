@@ -1,5 +1,5 @@
-const bot_admin = require('config').get('common').get('bot_admin')
-	, cronJob = require('cron').CronJob;
+const bot_admin = require("config").get("common").get("bot_admin")
+	, cronJob = require("cron").CronJob;
 
 module.exports = {
 	name: 'unloadcron',
@@ -27,4 +27,4 @@ module.exports = {
 		
 		message.reply(`that isn't an active CronJob!`);
 	}
-}
+};

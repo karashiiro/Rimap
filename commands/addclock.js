@@ -15,7 +15,7 @@ module.exports = {
 		const mod_roles = disConfig.get('mod_roles');
 		const status_channel = disConfig.get('status_channel');
 		
-		if (!message.member.roles.some(roles => mod_roles.includes(roles.name))) return;
+		if (!message.member.roles.some((roles) => mod_roles.includes(roles.name))) return;
 		
 		const guildID = message.guild.id;
 		const timezone = args[1];
@@ -23,7 +23,7 @@ module.exports = {
 		const cronName = `updateTime.${guildID}.${args[0]}`;
 		
 		var guild = client.guilds.get(guildID);
-		var statusChannel = guild.channels.find(ch => ch.name === status_channel);
+		var statusChannel = guild.channels.find((ch) => ch.name === status_channel);
 		
 		if (!args[0] || !args[1] || !parseInt(channel) || timezone.indexOf('/') === -1) {
 			statusChannel.send(commontags.stripIndents`
@@ -33,25 +33,25 @@ module.exports = {
 			`);
 		}
 		
-		if (!client.guilds.get(guildID).channels.find(ch => ch.id === channel)) return;
+		if (!client.guilds.get(guildID).channels.find((ch) => ch.id === channel)) return;
 		
 		if (fs.existsSync(`./cronjobs/${cronName}.js`)){
 			fs.unlinkSync(`./cronjobs/${cronName}.js`);
 		}
 		
 		const cronScript = 
-`const moment = require('moment');
+`const moment = require("moment");
 
 module.exports = {
-	cronstring: '* * * * *',
+	cronstring: "* * * * *",
 	execute(client, logger) {
 		try { client.guilds.get("${guildID}"); } catch(e) {}
 		
 		const clocks = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚', '🕛'];
 		const halfHourClocks = ['🕜', '🕝', '🕞', '🕟', '🕠', '🕡', '🕢', '🕣', '🕤', '🕥', '🕦', '🕧'];
-		var timeChannel = client.guilds.get("${guildID}").channels.find(ch => ch.id === "${channel}");
+		var timeChannel = client.guilds.get("${guildID}").channels.find((ch) => ch.id === "${channel}");
 		
-		var now = moment.tz('${timezone}');
+		var now = moment.tz("${timezone}");
 		
 		var minute = parseInt(now.format('m'));
 		
@@ -59,9 +59,9 @@ module.exports = {
 		
 		var clockEmoji = minute < 30 ? clocks[hour - 1] : halfHourClocks[hour - 1];
 		
-		timeChannel.setName(clockEmoji + " " + now.format('h:mm A zz'));
+		timeChannel.setName(clockEmoji + " " + now.format("h:mm A zz"));
 	}
-}`;
+};`;
 		
 		fs.appendFileSync(`./cronjobs/${cronName}.js`, cronScript);
 		
@@ -70,4 +70,4 @@ module.exports = {
 		
 		message.channel.send(`Clock ${timezone} added!`).then((m) => m.delete(3000));
 	}
-}
+};

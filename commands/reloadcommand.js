@@ -1,5 +1,5 @@
 // https://anidiots.guide/first-bot/a-basic-command-handler
-const bot_admin = require('config').get('common').get('bot_admin');
+const bot_admin = require("config").get("common").get("bot_admin");
 
 module.exports = {
 	name: 'reloadcommand',
@@ -24,4 +24,4 @@ module.exports = {
 		logger.log('info', `Command ${commandName} reloaded by ${message.author.tag}.`);
 		message.reply(`the command ${commandName} has been reloaded!`);
 	}
-}
+};

@@ -29,4 +29,4 @@ module.exports = {
 			message.channel.send(stats);
 		});
 	}
-}
+};

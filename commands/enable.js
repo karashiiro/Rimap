@@ -1,5 +1,6 @@
-const config = require('config')
-	, disConfig = config.get('discord');
+const config = require("config")
+	, disConfig = config.get("discord")
+	, xivvi_db = require("config").get("common").get("database");
 
 module.exports = {
 	name: 'disable',
@@ -7,7 +8,7 @@ module.exports = {
 	args: true,
 	execute(client, message, logger, args) {
 		// Check if Administrator
-		if (!message.member.roles.some(roles => disConfig.get('mod_roles').includes(roles.name))) return;
+		if (!message.member.roles.some((roles) => disConfig.get('mod_roles').includes(roles.name))) return;
 		
 		const commandName = args[0];
 		const dbURL = `mongodb://localhost:27017/`;
@@ -15,7 +16,7 @@ module.exports = {
 		client.db.connect(dbURL, { useNewUrlParser: true }, (err, db) => {
 			if (err) throw err;
 			
-			var dbo = db.db("xivvi_db");
+			var dbo = db.db(xivvi_db);
 			var documentData = { guild: message.guild.id, disabledCommands: [commandName] };
 			
 			dbo.collection("disabledCommands").findOne({ guild: message.guild.id }, (err, res) => { // Check if an entry exists.
@@ -27,7 +28,7 @@ module.exports = {
 					dbo.collection("disabledCommands").updateOne({ guild: message.guild.id }, { $set: { disabledCommands: res.disabledCommands } }, (err, res) => { // Update if existing.
 						if (err) throw err;
 						
-						logger.log('info', `xivvi_db: Updated ${message.guild.id} enabled commands: ${commandName}`);
+						logger.log('info', `${xivvi_db}: Updated ${message.guild.id} enabled commands: ${commandName}`);
 						message.reply(`Removed ${commandName} from the disabled command list.`);
 						
 						db.close();
@@ -38,4 +39,4 @@ module.exports = {
 			});
 		});
 	}
-}
+};

@@ -1,9 +1,8 @@
 // Updates the server population statistics every day, starting from server join date.
-
-const fs = require('fs');
+const fs = require("fs");
 
 module.exports = {
-	cronstring: '0 0 * * *',
+	cronstring: "0 0 * * *",
 	execute(client, logger) {
 		var counter = 0;
 		
@@ -24,6 +23,6 @@ module.exports = {
 			});
 		});
 		
-		logger.log(`info`, `Server statistics have been updated for ${counter} servers.`);
+		logger.log("info", `Server statistics have been updated for ${counter} servers.`);
 	}
-}
+};

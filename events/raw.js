@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports = async (client, logger, event) => {
 	const events = {
@@ -25,4 +25,4 @@ module.exports = async (client, logger, event) => {
 	}
 
 	client.emit(events[event.t], reaction, user);
-}
+};

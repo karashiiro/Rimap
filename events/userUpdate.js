@@ -1,5 +1,5 @@
-const config = require('config')
-	, disConfig = config.get('discord');
+const config = require("config")
+	, disConfig = config.get("discord");
 
 module.exports = async (client, logger, oldUser, newUser) => {
 	if (oldUser.tag === newUser.tag) return;
@@ -10,4 +10,4 @@ module.exports = async (client, logger, oldUser, newUser) => {
 	});
 	
 	logger.log('warn', `User ${oldUser.tag} changed their username to ${newUser.tag}.`);
-}
+};

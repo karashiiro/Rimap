@@ -1,21 +1,21 @@
 // Check every six hours if there's a new post from @PopTartADay
-const { Attachment } = require('discord.js')
-	, config = require('config')
-	, fs = require('fs')
-	, tweetConfig = config.get('twitter')
-	, twitter = require('twitter');
+const { Attachment } = require("discord.js")
+	, config = require("config")
+	, fs = require("fs")
+	, tweetConfig = config.get("twitter")
+	, twitter = require("twitter");
 
 module.exports = {
-	cronstring: '0 */6 * * *',
+	cronstring: "0 */6 * * *",
 	execute(client, logger) {
 		var twitterClient = new twitter({
-			consumer_key: tweetConfig.get('consumer_key'),
-			consumer_secret: tweetConfig.get('consumer_secret'),
-			access_token_key: tweetConfig.get('access_token'),
-			access_token_secret: tweetConfig.get('access_secret')
+			consumer_key: tweetConfig.get("consumer_key"),
+			consumer_secret: tweetConfig.get("consumer_secret"),
+			access_token_key: tweetConfig.get("access_token"),
+			access_token_secret: tweetConfig.get("access_secret")
 		});
 		
-		fs.readFile('./PopTartADay.txt', (err1, url) => {
+		fs.readFile("./PopTartADay.txt", (err1, url) => {
 			if (err1) throw err1;
 			
 			url = url.toString();
@@ -36,11 +36,11 @@ module.exports = {
 						});
 					});
 					
-					fs.appendFile('./PopTartADay.txt', `${new_url}\n`, (err3) => {
+					fs.appendFile("./PopTartADay.txt", `${new_url}\n`, (err3) => {
 						if (err3) throw err3;
 					});
 				}
 			});
 		});
 	}
-}
+};

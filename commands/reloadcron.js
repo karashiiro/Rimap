@@ -25,4 +25,4 @@ module.exports = {
 		logger.log('info', `CronJob ${cronName} has been reloaded by ${message.author.tag}.`);
 		message.reply(`the CronJob ${cronName} has been reloaded!`);
 	}
-}
+};

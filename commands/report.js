@@ -31,8 +31,8 @@ module.exports = {
 		});
 		
 		try {
-			reportChannel = guild.channels.find(ch => ch.name === disConfig.get('report_channel'));
-			reportChannel.send(`${guild.roles.find(r => r.name === disConfig.get('mod_roles')[2])} ${message.author.tag} just sent a report: ${report}`);
+			reportChannel = guild.channels.find((ch) => ch.name === disConfig.get('report_channel'));
+			reportChannel.send(`${guild.roles.find((r) => r.name === disConfig.get('mod_roles')[2])} ${message.author.tag} just sent a report: ${report}`);
 			
 			message.channel.send(`Thank you for your report. The moderators will read it as soon as they are available.`);
 		} catch(error) {
@@ -44,4 +44,4 @@ module.exports = {
 			logger.log('error', `Failed to send a report to guild ${guild}: ${error}`);
 		}
 	}
-}
+};

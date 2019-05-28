@@ -28,7 +28,7 @@ module.exports = {
 		// MAIN LOGIC
 		//
 		
-		if (!message.member.roles.some(roles => disConfig.get('mod_roles').includes(roles.name))) return;
+		if (!message.member.roles.some((roles) => disConfig.get('mod_roles').includes(roles.name))) return;
 		
 		try {
 			var user = client.users.get(getUserFromMention(args[0]));
@@ -41,4 +41,4 @@ module.exports = {
 			message.reply(`that's not a valid member. Usage: \`${disConfig.get('prefix')}when <mention>\``);
 		}
 	}
-}
+};

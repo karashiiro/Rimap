@@ -1,11 +1,11 @@
-const config = require('config')
-	, cronJob = require('cron').CronJob
-	, Discord = require('discord.js')
-	, disConfig = config.get('discord')
-	, fs = require('fs')
-	, MongoClient = require('mongodb').MongoClient
-	, winston = require('winston');
-require('winston-daily-rotate-file');
+const config = require("config")
+	, cronJob = require("cron").CronJob
+	, Discord = require("discord.js")
+	, disConfig = config.get("discord")
+	, fs = require("fs")
+	, MongoClient = require("mongodb").MongoClient
+	, winston = require("winston");
+require("winston-daily-rotate-file");
 
 //
 // MAIN OBJECT INIT
@@ -13,24 +13,24 @@ require('winston-daily-rotate-file');
 
 // Folder creation
 
-if (!fs.existsSync(`temp`)) { // This is where BMP files are kept temporarily
-	fs.mkdirSync(`temp`);
+if (!fs.existsSync("temp")) { // This is where BMP files are kept temporarily
+	fs.mkdirSync("temp");
 }
 
-if (!fs.existsSync(`stats`)) { // Server stats
-	fs.mkdirSync(`stats`);
+if (!fs.existsSync("stats")) { // Server stats
+	fs.mkdirSync("stats");
 }
 
-if (!fs.existsSync(`helpfiles`)) { // Channel descriptions for ~whatisthis
-	fs.mkdirSync(`helpfiles`);
+if (!fs.existsSync("helpfiles")) { // Channel descriptions for ~whatisthis
+	fs.mkdirSync("helpfiles");
 }
 
 // Logging
 
 const rotatingTransport = new winston.transports.DailyRotateFile({ // Def rotating log
-	filename: `logs/xivvi-%DATE%.log`,
-	datePattern: `YYYY-MM-DD-HH`,
-	maxSize: `50m`
+	filename: "logs/xivvi-%DATE%.log",
+	datePattern: "YYYY-MM-DD-HH",
+	maxSize: "50m"
 });
 
 const logger = winston.createLogger({ // Start winston logging

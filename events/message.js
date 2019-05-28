@@ -1,10 +1,10 @@
-const Discord = require('discord.js')
-	, fs = require('fs')
-	, gm = require('gm')
-	, mod_roles = require('config').get('discord').get('mod_roles')
-	, prefix = require('config').get('discord').get('prefix')
-	, request = require('request')
-	, xivvi_db = require('config').get('common').get('database');
+const Discord = require("discord.js")
+	, fs = require("fs")
+	, gm = require("gm")
+	, mod_roles = require("config").get("discord").get("mod_roles")
+	, prefix = require("config").get("discord").get("prefix")
+	, request = require("request")
+	, xivvi_db = require("config").get("common").get("database");
 
 module.exports = async (client, logger, message) => {
 	if (message.guild) {
@@ -131,4 +131,4 @@ module.exports = async (client, logger, message) => {
 			}
 		});
 	});
-}
+};

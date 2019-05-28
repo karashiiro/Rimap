@@ -1,5 +1,5 @@
-const config = require('config')
-	, disConfig = config.get('discord');
+const config = require("config")
+	, disConfig = config.get("discord");
 
 module.exports = async (client, logger) => {
 	// Bot setup
@@ -12,4 +12,4 @@ module.exports = async (client, logger) => {
 		var statusChannel = value.channels.find(ch => ch.name === disConfig.get('status_channel'));
 		statusChannel.send(`Bot loaded at ${new Date()}.`);
 	});
-}
+};

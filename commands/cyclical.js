@@ -11,7 +11,7 @@ module.exports = {
 	args: true,
 	execute(client, message, logger, args) {
 		// Check if Administrator
-		if (!message.member.roles.some(roles => disConfig.get('mod_roles').includes(roles.name))) return;
+		if (!message.member.roles.some((roles) => disConfig.get('mod_roles').includes(roles.name))) return;
 		
 		if (args[0].toLowerCase() === "stop") {
 			try {
@@ -63,7 +63,7 @@ module.exports = {
 			
 		channel.send(embeddable);
 	}
-}`;
+};`;
 		
 		fs.appendFileSync(`./cronjobs/cyclical.${message.guild.id}.${message.channel.id}.js`, cronScript);
 		cronEvent = require(`../cronjobs/cyclical.${message.guild.id}.${message.channel.id}.js`);
@@ -72,4 +72,4 @@ module.exports = {
 		
 		message.channel.send(`Cyclical started!`);
 	}
-}
+};

@@ -23,7 +23,7 @@ module.exports = {
 		}
 
 		
-		if (!message.member.roles.some(roles => disConfig.get('mod_roles').includes(roles.name))) return;
+		if (!message.member.roles.some((roles) => disConfig.get('mod_roles').includes(roles.name))) return;
 		
 		message.delete();
 		
@@ -31,10 +31,10 @@ module.exports = {
 		var roleName = args.join(" ");
 		
 		var guild = client.guilds.get(message.guild.id);
-		var statusChannel = guild.channels.find(ch => ch.name === disConfig.get('status_channel'));
+		var statusChannel = guild.channels.find((ch) => ch.name === disConfig.get('status_channel'));
 		
-		guild.members.find(mem => mem.id === userID)
-		.removeRole(guild.roles.find(role => role.name === roleName))
+		guild.members.find((mem) => mem.id === userID)
+		.removeRole(guild.roles.find((role) => role.name === roleName))
 		.catch((error) => { // Maybe they were banned? Who knows why this would fail.
 			statusChannel.send(commontags.stripIndents`
 				<@${message.author.id}>, adding that role failed. This could be because of one of several factors, including but not limited to:
@@ -46,4 +46,4 @@ module.exports = {
 			`);
 		});
 	}
-}
+};

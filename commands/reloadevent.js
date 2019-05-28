@@ -1,5 +1,5 @@
 // https://anidiots.guide/first-bot/a-basic-command-handler
-const bot_admin = require('config').get('common').get('bot_admin');
+const bot_admin = require("config").get("common").get("bot_admin");
 
 module.exports = {
 	name: 'reloadevent',
@@ -27,4 +27,4 @@ module.exports = {
 			message.reply(`something went wrong, are you sure you typed the event name correctly?`);
 		}
 	}
-}
+};

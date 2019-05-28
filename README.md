@@ -1,5 +1,5 @@
 # Rimap
-A production version of Prima.
+(WIP) A production version of Prima.
 
 # Adding Rimap to Your Discord Server
 This is the easy way to use Rimap, just click the link below to add Rimap to your server and then follow the other directions:
@@ -7,6 +7,12 @@ This is the easy way to use Rimap, just click the link below to add Rimap to you
 No link here yet.
 
 Create a channel called `#bot-stuff` for Rimap to post random data to, and make sure you have a role called "Moderator".
+
+# Commands
+
+`~addclock <voice channel ID> <Linux-formatted timezone` - Turns a voice channel into a clock.
+
+`~deleteclock <voice channel ID>` - Smashes a clock.
 
 # Installation
 (WIP)

@@ -8,11 +8,41 @@ No link here yet.
 
 Create a channel called `#bot-stuff` for Xivvi to post random data to, and make sure you have a role called "Moderator".
 
-# Commands
+Create a channel called `#reports` to handle that stuff, or disable the command with `~disable report` if you have another bot doing that already.
+
+# General Commands
+`~enable <commandname>` - Enables a command.
+
+`~disable <commandname>` - Disables a command.
 
 `~addclock <voice channel ID> <Linux-formatted timezone` - Turns a voice channel into a clock.
 
 `~deleteclock <voice channel ID>` - Smashes a clock.
+
+`~setdescription <description>` - Set a description for a channel that can then be called by anyone with `~whatisthis`.
+
+`~whatisthis` - Post the description in chat.
+
+`~addrole <mention> <role>` - Adds a role to a user. Somewhat obsolete thanks to Discord adding mobile role assignment.
+
+`~removerole <mention> <role>` - Removes a role from a user.
+
+`~report <report text>` - Reports something to `#reports`.
+
+`~cyclical <cronstring> <message>` - Repeatedly sends a message in a channel, at the frequency described in the cronstring. Seconds are not optional, set them to 0 if you want the message to show on the minute. Cronstring information is available [here](https://www.npmjs.com/package/node-cron). Using `~cyclical stop` ends the repetition.
+
+`~when <mention>` - See when a user joined Discord. Potentially useful for detecting alts and spammers.
+
+# Bot Admin Commands
+`~reloadcommand <commandname>` - Reloads a command from its file.
+
+`~reloadevent <eventname>` - Reloads an event from its file.
+
+`~reloadcron <cronname>` - Reloads a CronJob from its file.
+
+`~listcron` - List all running CronJobs.
+
+`~unloadcron <cronname>` - Unload a CronJob.
 
 # Installation
 (WIP)

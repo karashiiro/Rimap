@@ -2,12 +2,18 @@
 A production version of Prima.
 
 # Adding Rimap to Your Discord Server
-Nothing here yet.
+This is the easy way to use Rimap, just click the link below to add Rimap to your server:
+
+No link here yet.
 
 # Installation
 (WIP)
 
-There's a fair number of commands to be run to install the node.js dependencies, listed below:
+If you want to host a copy of Rimap yourself, it's a little more involved. First, get a Bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/).
+
+There's a fair number of commands to be run to install the node.js dependencies into your Rimap folder, listed below:
+
+`npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to rimap.js.
 
 `npm i config`
 

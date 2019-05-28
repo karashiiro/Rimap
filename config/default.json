@@ -1,0 +1,38 @@
+{
+	"common": {
+		"bot_admin": "128581209109430272"
+	},
+
+	"discord": {
+		"prefix": "~",
+		"token": "",
+		
+		"status_channel": "bot-stuff",
+		"report_channel": "reports",
+		
+		"mod_roles": [
+			"Administrator",
+			"Admin",
+			"Moderator",
+			"Mod"
+		],
+		
+		"presences": [
+			"Last Idea",
+			"Granblue Fantasy",
+			"Epic 7",
+			"Puzzle & Dragons",
+			"FINAL FANTASY: RECORD KEEPER",
+			"FINAL FANTASY: BRAVE EXVIUS",
+			"Dragalia Lost",
+			"PSO2es"
+		]
+	},
+	
+	"twitter": {
+		"consumer_key": "",
+		"consumer_secret": "",
+		"access_token": "",
+		"access_secret": ""
+	}
+}

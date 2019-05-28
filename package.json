@@ -1,0 +1,24 @@
+{
+  "name": "Xivvi",
+  "version": "1.0.0",
+  "description": "A production version of Prima.",
+  "main": "xivvi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "karashiiro",
+  "license": "ISC",
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "config": "^3.1.0",
+    "cron": "^1.7.1",
+    "discord.js": "^11.5.0",
+    "gm": "^1.23.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "mongodb": "^3.2.6",
+    "twitter": "^1.7.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  }
+}

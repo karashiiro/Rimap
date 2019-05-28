@@ -1,6 +1,7 @@
 {
 	"common": {
-		"bot_admin": "128581209109430272"
+		"bot_admin": "128581209109430272",
+		"database": "xivvi_db"
 	},
 
 	"discord": {

@@ -1,9 +1,7 @@
-.. image:: https://discordapp.com/api/guilds/582809462293921793/embed.png
-   :target: https://discord.gg/ZbyeWvB
-   :alt: Discord server invite
-
 # (Big WIP) Xivvi
-(WIP) A production version of Prima. Less efficient, more stable, more secure. Feel free to join the support server above.
+(WIP) A production version of Prima. Less efficient, more stable, more secure. Feel free to join the support server below.
+
+https://discord.gg/ZbyeWvB
 
 # Adding Xivvi to Your Discord Server
 This is the easy way to use Xivvi, just click the link below to add Xivvi to your server and then follow the other directions:

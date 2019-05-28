@@ -47,4 +47,6 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `discord.status_channel` is the channel you want Rimap to tell you random information in.
 
+`discord.report_channel` is the channel you want Rimap to send user reports to.
+
 `discord.mod_roles` is an array of roles that can use the administrative commands like `~bulkdelete` etc.

@@ -6,7 +6,7 @@ This is the easy way to use Rimap, just click the link below to add Rimap to you
 
 No link here yet.
 
-Create a channel called `#bot-stuff` for Rimap to post random data to.
+Create a channel called `#bot-stuff` for Rimap to post random data to, and make sure you have a role called "Moderator".
 
 # Installation
 (WIP)

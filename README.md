@@ -1,12 +1,8 @@
 # (Big WIP) Xivvi
-(WIP) A production version of Prima. Less efficient, more stable, more secure. Feel free to join the support server below.
-
-https://discord.gg/ZbyeWvB
+(WIP) A production version of Prima. Less efficient, more stable, more secure. Feel free to join [the support server](https://discord.gg/ZbyeWvB).
 
 ## Adding Xivvi to Your Discord Server
-This is the easy way to use Xivvi, just click the link below to add Xivvi to your server and then follow the other directions:
-
-https://discordapp.com/api/oauth2/authorize?client_id=582785047371841537&permissions=0&scope=bot
+This is the easy way to use Xivvi, just click [this link](https://discordapp.com/api/oauth2/authorize?client_id=582785047371841537&permissions=0&scope=bot) to add Xivvi to your server and then follow the other directions:
 
 Create a channel called `#bot-stuff` for Xivvi to post random data to, and make sure you have a role called "Moderator".
 

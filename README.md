@@ -17,6 +17,8 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to rimap.js.
 
+`npm i common-tags`
+
 `npm i config`
 
 `npm i cron`

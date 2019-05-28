@@ -41,6 +41,8 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 # Configuration
 
+`common.bot_admin` should be your Discord ID.
+
 `discord.prefix` is the command prefix.
 
 `discord.token` is your bot token.

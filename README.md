@@ -1,4 +1,7 @@
 # (Big WIP) Xivvi
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/77d511b3bd694eb1bb086e9252985b4e)](https://app.codacy.com/app/karashiiro/Xivvi?utm_source=github.com&utm_medium=referral&utm_content=karashiiro/Xivvi&utm_campaign=Badge_Grade_Dashboard)
+
 (WIP) A production version of Prima. Less efficient, more stable, more secure. Feel free to join the support server below.
 
 https://discord.gg/ZbyeWvB

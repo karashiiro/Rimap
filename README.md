@@ -1,12 +1,12 @@
-# Rimap
+# Xivvi
 (WIP) A production version of Prima.
 
-# Adding Rimap to Your Discord Server
-This is the easy way to use Rimap, just click the link below to add Rimap to your server and then follow the other directions:
+# Adding Xivvi to Your Discord Server
+This is the easy way to use Xivvi, just click the link below to add Rimap to your server and then follow the other directions:
 
 No link here yet.
 
-Create a channel called `#bot-stuff` for Rimap to post random data to, and make sure you have a role called "Moderator".
+Create a channel called `#bot-stuff` for Xivvi to post random data to, and make sure you have a role called "Moderator".
 
 # Commands
 
@@ -17,7 +17,7 @@ Create a channel called `#bot-stuff` for Rimap to post random data to, and make 
 # Installation
 (WIP)
 
-If you want to host a copy of Rimap yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
+If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
 
 There's a fair number of commands to be run to install the node.js dependencies into your Rimap folder, listed below:
 
@@ -46,16 +46,15 @@ There's a fair number of commands to be run to install the node.js dependencies 
 `npm i winston-daily-rotate-file`
 
 # Configuration
-
 `common.bot_admin` should be your Discord ID.
 
 `discord.prefix` is the command prefix.
 
 `discord.token` is your bot token.
 
-`discord.status_channel` is the channel you want Rimap to tell you random information in.
+`discord.status_channel` is the channel you want Xivvi to tell you random information in.
 
-`discord.report_channel` is the channel you want Rimap to send user reports to.
+`discord.report_channel` is the channel you want Xivvi to send user reports to.
 
 `discord.mod_roles` is an array of roles that can use the administrative commands like `~bulkdelete` etc.
 

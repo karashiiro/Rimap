@@ -3,7 +3,7 @@
 
 https://discord.gg/ZbyeWvB
 
-# Adding Xivvi to Your Discord Server
+## Adding Xivvi to Your Discord Server
 This is the easy way to use Xivvi, just click the link below to add Xivvi to your server and then follow the other directions:
 
 https://discordapp.com/api/oauth2/authorize?client_id=582785047371841537&permissions=0&scope=bot
@@ -12,7 +12,7 @@ Create a channel called `#bot-stuff` for Xivvi to post random data to, and make 
 
 Create a channel called `#reports` to handle that stuff, or disable the command with `~disable report` if you have another bot doing that already.
 
-# General Commands
+### General Commands
 `~enable <commandname>` - Enables a command.
 
 `~disable <commandname>` - Disables a command.
@@ -35,7 +35,7 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~when <mention>` - See when a user joined Discord. Potentially useful for detecting alts and spammers.
 
-# Bot Admin Commands
+### Bot Admin Commands
 `~reloadcommand <commandname>` - Reloads a command from its file.
 
 `~reloadevent <eventname>` - Reloads an event from its file.
@@ -46,7 +46,7 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~unloadcron <cronname>` - Unload a CronJob.
 
-# Installation
+## Installation
 (WIP)
 
 If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
@@ -77,7 +77,7 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `npm i winston-daily-rotate-file`
 
-# Configuration
+### Configuration
 `common.bot_admin` should be your Discord ID.
 
 `discord.prefix` is the command prefix.

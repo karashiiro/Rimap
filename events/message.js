@@ -3,12 +3,15 @@ const Discord = require('discord.js')
 	, gm = require('gm')
 	, mod_roles = require('config').get('discord').get('mod_roles')
 	, prefix = require('config').get('discord').get('prefix')
-	, request = require('request');
+	, request = require('request')
+	, xivvi_db = require('config').get('common').get('database');
 
 module.exports = async (client, logger, message) => {
-	message.guild.fetchMember(message.author.id).catch((e) => {
-		message.guild.fetchMember(message.author.id).catch(e => {});
-	}); // An attempt to make things work more often.
+	if (message.guild) {
+		message.guild.fetchMember(message.author.id).catch((e) => {
+			message.guild.fetchMember(message.author.id).catch(e => {});
+		}); // An attempt to make things work more often.
+	}
 	
 	// ??
 	if (message.content.indexOf(`┻━`) !== -1) {
@@ -70,7 +73,7 @@ module.exports = async (client, logger, message) => {
 	client.db.connect(`mongodb://localhost:27017/`, { useNewUrlParser: true }, (err, db) => {
 		if (err) throw err;
 		
-		var dbo = db.db("xivvi_db");
+		var dbo = db.db(xivvi_db);
 		
 		dbo.collection("disabledCommands").findOne({ guild: message.guild.id }, (err, res) => { // Check if an entry exists.
 			if (res && res.disabledCommands && res.disabledCommands.includes(commandName)) return; // Return if the command is disabled.

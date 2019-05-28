@@ -2,7 +2,7 @@
 (WIP) A production version of Prima.
 
 # Adding Xivvi to Your Discord Server
-This is the easy way to use Xivvi, just click the link below to add Rimap to your server and then follow the other directions:
+This is the easy way to use Xivvi, just click the link below to add Xivvi to your server and then follow the other directions:
 
 No link here yet.
 
@@ -19,7 +19,7 @@ Create a channel called `#bot-stuff` for Xivvi to post random data to, and make 
 
 If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
 
-There's a fair number of commands to be run to install the node.js dependencies into your Rimap folder, listed below:
+There's a fair number of commands to be run to install the node.js dependencies into your Xivvi folder, listed below:
 
 `npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to rimap.js.
 

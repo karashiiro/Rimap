@@ -21,7 +21,7 @@ If you want to host a copy of Xivvi yourself, it's a little more involved. First
 
 There's a fair number of commands to be run to install the node.js dependencies into your Xivvi folder, listed below:
 
-`npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to rimap.js.
+`npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to xivvi.js.
 
 `npm i common-tags`
 

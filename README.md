@@ -11,7 +11,7 @@ Create a channel called `#bot-stuff` for Rimap to post random data to.
 # Installation
 (WIP)
 
-If you want to host a copy of Rimap yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/).
+If you want to host a copy of Rimap yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
 
 There's a fair number of commands to be run to install the node.js dependencies into your Rimap folder, listed below:
 
@@ -50,3 +50,11 @@ There's a fair number of commands to be run to install the node.js dependencies 
 `discord.report_channel` is the channel you want Rimap to send user reports to.
 
 `discord.mod_roles` is an array of roles that can use the administrative commands like `~bulkdelete` etc.
+
+`twitter.consumer_key`, along with the other three keys below, are your Twitter access tokens.
+
+`twitter.consumer_secret`
+
+`twitter.access_token`
+
+`twitter.access_secret`

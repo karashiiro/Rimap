@@ -1,5 +1,5 @@
 # Xivvi
-(WIP) A production version of Prima.
+(WIP) A production version of Prima. Less efficient, more stable, more secure.
 
 # Adding Xivvi to Your Discord Server
 This is the easy way to use Xivvi, just click the link below to add Xivvi to your server and then follow the other directions:

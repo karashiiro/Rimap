@@ -1,4 +1,4 @@
-# Xivvi
+# (Big WIP) Xivvi
 (WIP) A production version of Prima. Less efficient, more stable, more secure.
 
 Support server: https://discord.gg/ZbyeWvB

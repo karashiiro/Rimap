@@ -23,6 +23,8 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `npm i discord.js`
 
+`npm i gm` - You also need to install [Graphicsmagick.](http://www.graphicsmagick.org/)
+
 `npm i moment`
 
 `npm i moment-timezone`

@@ -34,6 +34,10 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~when <mention>` - See when a user joined Discord. Potentially useful for detecting alts and spammers.
 
+`~iam <world> <name> <surname>` - Links an FFXIV character to your Discord account. This can be changed at any time.
+
+`~whoami` - Outputs stored `~iam` data.
+
 ### Bot Admin Commands
 `~reloadcommand <commandname>` - Reloads a command from its file.
 

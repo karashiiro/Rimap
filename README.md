@@ -38,6 +38,8 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~whoami` - Outputs stored `~iam` data.
 
+`~statsout [-g]` - Outputs stored population statistics, collected every midnight. Using the `-g` toggle outputs a graph instead.
+
 ### Bot Admin Commands
 `~reloadcommand <commandname>` - Reloads a command from its file.
 

@@ -48,7 +48,7 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 ## Installation
 (WIP)
 
-If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API.
+If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API, and an [XIVAPI key](https://xivapi.com/account).
 
 There's a fair number of commands to be run to install the node.js dependencies into your Xivvi folder, listed below:
 
@@ -98,3 +98,5 @@ There's a fair number of commands to be run to install the node.js dependencies 
 `twitter.access_token`
 
 `twitter.access_secret`
+
+`xivapi.api_key` is your XIVAPI developer token.

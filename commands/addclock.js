@@ -59,7 +59,9 @@ module.exports = {
 		
 		var clockEmoji = minute < 30 ? clocks[hour - 1] : halfHourClocks[hour - 1];
 		
-		timeChannel.setName(clockEmoji + " " + now.format("h:mm A zz"));
+		timeChannel.setName(clockEmoji + " " + now.format("h:mm A zz")).catch((e) => {
+			logger.log("error", "File updateTime.${guildID}.${channel}.js threw an error: " + e.toString());
+		});
 	}
 };`;
 		

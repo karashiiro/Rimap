@@ -76,6 +76,8 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `npm i winston-daily-rotate-file`
 
+`npm i xivapi-js`
+
 ### Configuration
 `common.bot_admin` should be your Discord ID.
 

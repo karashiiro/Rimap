@@ -11,7 +11,20 @@ Create a channel called `#bot-stuff` for Xivvi to post random data to, and make 
 
 Create a channel called `#reports` to handle that stuff, or disable the command with `~disable report` if you have another bot doing that already.
 
-### General Commands
+### User Commands
+`~map <mapname>` - Sends a zone map. Only options are Hydatos and Pyros at this time.
+
+`~flag <x> <y> <mapname>` - Sends a zone map with a flag at (x, y).
+
+`~whatisthis` - Posts the detailed channel description set by `~setdescription` in chat.
+
+`~report <report text>` - (WIP) Reports something to `#reports`.
+
+`~iam <world> <name> <surname>` - Links an FFXIV character to your Discord account. This can be changed at any time.
+
+`~whoami` - Outputs stored `~iam` data.
+
+### Administrative Commands
 `~enable <commandname>` - Enables a command.
 
 `~disable <commandname>` - Disables a command.
@@ -22,21 +35,13 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~setdescription <description>` - Set a description for a channel that can then be called by anyone with `~whatisthis`.
 
-`~whatisthis` - Post the description in chat.
-
 `~addrole <mention> <role>` - Adds a role to a user. Somewhat obsolete thanks to Discord adding mobile role assignment.
 
 `~removerole <mention> <role>` - Removes a role from a user.
 
-`~report <report text>` - Reports something to `#reports`.
-
 `~cyclical <cronstring> <message>` - Repeatedly sends a message in a channel, at the frequency described in the cronstring. Seconds are not optional, set them to 0 if you want the message to show on the minute. Cronstring information is available [here](https://www.npmjs.com/package/node-cron). Using `~cyclical stop` ends the repetition.
 
 `~when <mention>` - See when a user joined Discord. Potentially useful for detecting alts and spammers.
-
-`~iam <world> <name> <surname>` - Links an FFXIV character to your Discord account. This can be changed at any time.
-
-`~whoami` - Outputs stored `~iam` data.
 
 `~statsout [-g]` - Outputs stored population statistics, collected every midnight. Using the `-g` toggle outputs a graph instead.
 

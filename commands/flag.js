@@ -12,20 +12,49 @@ module.exports = {
 		//
 		
 		function getSquashedCoords(zoneName) {
-			if (zoneName === "eureka anemos.png" ||
-				zoneName === "eureka pagos.png"	 ||
-				zoneName === "eureka pyros.png"  ||
-				zoneName === "eureka hydatos.png") {
-				return { x: 42, y: 42 };
+			if (zoneName === "coerthas western highlands.png" ||
+				zoneName === "the dravanian forelands.png" ||
+				zoneName === "the dravanian hinterlands.png" ||
+				zoneName === "the churning mists.png" ||
+				zoneName === "azys lla.png" ||
+				zoneName === "the sea of clouds.png") {
+				return { x: 44, y: 44 }; // HW maps are slightly larger.
 			}
+			if (zoneName === "goblet.png" ||
+				zoneName === "goblet subdivision.png" ||
+				zoneName === "ul'dah.png" ||
+				zoneName === "lavender beds.png" ||
+				zoneName === "lavender beds subdivision.png" ||
+				zoneName === "gridania.png" ||
+				zoneName === "mist.png" ||
+				zoneName === "mist subdivision.png" ||
+				zoneName === "limsa lominsa.png" ||
+				zoneName === "ishgard foundation.png" ||
+				zoneName === "ishgard the pillars.png" ||
+				zoneName === "shirogane.png" ||
+				zoneName === "shirogane subdivision.png" ||
+				zoneName === "kugane.png" ||
+				zoneName === "rhalgr's reach.png") {
+				return { x: 21, y: 21 }; // Usual size of non-combat areas.
+			}
+			if (zoneName === "doman enclave.png" ||
+				zoneName === "idyllshire.png" ||
+				zoneName === "the gold saucer.png" ||
+				zoneName === "chocobo square.png") {
+				return { x: 11, y: 11 };
+			}
+			if (zoneName === "wolves den pier.png") {
+				return { x: 8.7, y: 8.7 };
+			}
+			return { x: 42, y: 42 }; // Usual squashed coordinate size of world maps.
 		};
 		
-		const MAPDIMS = {
-			X: 586,
-			Y: 585
+		function getRealCoords(zoneName) {
+			return { x: 585, y: 585 }; // Usual size of world maps.
 		};
 		
 		const COST_THRESHOLD = 10;
+		const SAFE_LENGTH = 6;
 		
 		//
 		// Basic input processing
@@ -57,6 +86,11 @@ module.exports = {
 			// Try the easiest case first to save processing time
 			var mapName = files.find((fileName) => fileName === args.join(" ").toLowerCase() + ".png");
 			
+			// The Levenshtein algorithm doesn't work so well on large datasets, so we try to partial match first.
+			if (!mapName && args.join(" ").length >= SAFE_LENGTH) {
+				mapName = files.find((fileName) => fileName.includes(args.join(" ").toLowerCase()));
+			}
+			
 			// If it doesn't match any file, we do a fuzzy string search to get what the user wanted
 			if (!mapName) {
 				// Get costs of all files compared to user input
@@ -84,10 +118,11 @@ module.exports = {
 			}
 			
 			// Place flag and send image
+			var fileCoords = getRealCoords(mapName);
 			var gameCoords = getSquashedCoords(mapName);
 			
 			gm(fs.readFileSync("./assets/xivmaps/" + mapName), mapName)
-			.draw("image", "Over", ((X_COORD * MAPDIMS.X) / gameCoords.x) - 16, ((Y_COORD * MAPDIMS.Y) / gameCoords.y) - 16, 32, 32, __dirname + "\\..\\assets\\icons\\redflag.png")
+			.draw("image", "Over", ((X_COORD * fileCoords.x) / gameCoords.x) - 16, ((Y_COORD * fileCoords.y) / gameCoords.y) - 16, 32, 32, __dirname + "\\..\\assets\\icons\\redflag.png")
 			.write(__dirname + "\\..\\temp\\" + message.channel.id + mapName, (err) => {
 				if (err) throw err;
 				

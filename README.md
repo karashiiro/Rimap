@@ -12,7 +12,7 @@ Create a channel called `#bot-stuff` for Xivvi to post random data to, and make 
 Create a channel called `#reports` to handle that stuff, or disable the command with `~disable report` if you have another bot doing that already.
 
 ### User Commands
-`~map <mapname>` - Sends a zone map. Only options are Hydatos and Pyros at this time.
+`~map <mapname>` - Sends a zone map.
 
 `~flag <x> <y> <mapname>` - Sends a zone map with a flag at (x, y).
 

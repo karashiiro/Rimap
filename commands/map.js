@@ -7,6 +7,7 @@ module.exports = {
 	args: true,
 	execute(client, message, logger, args) {
 		const COST_THRESHOLD = 10;
+		const SAFE_LENGTH = 6;
 		
 		fs.readdir("./assets/xivmaps", (err, files) => {
 			if (err) throw err;

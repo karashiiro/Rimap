@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/77d511b3bd694eb1bb086e9252985b4e)](https://app.codacy.com/app/karashiiro/Xivvi?utm_source=github.com&utm_medium=referral&utm_content=karashiiro/Xivvi&utm_campaign=Badge_Grade_Dashboard)
 
-(WIP) A production version of Prima. Less efficient and more stable. Feel free to join [the support server](https://discord.gg/ZbyeWvB).
+(WIP) A production version of Prima. Less efficient and more stable.
 
 Scroll down to installation if you want to host it yourself. I'd actually prefer you host it yourself so I don't need to handle your data or add load to my one server (a laptop under the TV), but if you can't host it yourself you can use the link below.
 

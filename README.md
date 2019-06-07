@@ -26,6 +26,8 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~whoami` - Outputs stored `~iam` data.
 
+`~roll <args>` - Rolls dice??
+
 ### Administrative Commands
 `~enable <commandname>` - Enables a command.
 

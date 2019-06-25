@@ -18,9 +18,9 @@ module.exports = {
 		if (!message.member.roles.some((roles) => mod_roles.includes(roles.name))) return;
 		
 		const guildID = message.guild.id;
-		const timezone = args[1];
-		const channel = args[0];
-		const cronName = `updateTime.${guildID}.${args[0]}`;
+		const timezone = args[1].replace(/[^a-zA-Z_\/+0-9-]/g, "");
+		const channel = args[0].replace(/[^a-zA-Z]/g, "");
+		const cronName = `updateTime.${guildID}.${channel}`;
 		
 		var guild = client.guilds.get(guildID);
 		var statusChannel = guild.channels.find((ch) => ch.name === status_channel);

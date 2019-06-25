@@ -33,6 +33,7 @@ module.exports = {
 			cycle += args[i] + " ";
 		}
 		cycle += args[args.length - 1];
+		cycle = cycle.replace(/[^a-zA-Z ]/g, "");
 		
 		try {
 			const testCron = new cronJob(cronString, () => {}, null); // See if the constructor errors.

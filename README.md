@@ -28,6 +28,8 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~roll <args>` - Rolls dice??
 
+`~teamcraft` - Use the Teamcraft simulator.
+
 ### Administrative Commands
 `~enable <commandname>` - Enables a command.
 
@@ -77,6 +79,8 @@ There's a fair number of commands to be run to install the node.js dependencies 
 
 `npm i discord.js`
 
+`npm i @ffxiv-teamcraft/simulator`
+
 `npm i gm` - You also need to install [Graphicsmagick.](http://www.graphicsmagick.org/)
 
 `npm i moment`
@@ -84,6 +88,10 @@ There's a fair number of commands to be run to install the node.js dependencies 
 `npm i moment-timezone`
 
 `npm i mongodb` - Also install [MongoDB.](https://docs.mongodb.com/manual/administration/install-community/)
+
+`npm i request`
+
+`npm i request-promise`
 
 `npm i twitter`
 

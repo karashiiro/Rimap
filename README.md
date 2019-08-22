@@ -65,7 +65,7 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 ## Installation
 (WIP)
 
-If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API, and an [XIVAPI key](https://xivapi.com/account). You also need to install [Graphicsmagick](http://www.graphicsmagick.org/) and [MongoDB.](https://docs.mongodb.com/manual/administration/install-community/)
+If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API if you want to use the Twitter subscribe function. You also need to install [Graphicsmagick](http://www.graphicsmagick.org/) and [MongoDB.](https://docs.mongodb.com/manual/administration/install-community/)
 
 To run the server, just run the following commands in the install directory:
 
@@ -93,5 +93,3 @@ To run the server, just run the following commands in the install directory:
 `twitter.access_token`
 
 `twitter.access_secret`
-
-`xivapi.api_key` is your XIVAPI developer token.

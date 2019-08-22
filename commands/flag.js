@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const gm = require('gm');
-const xivvi = require('xivvi-common.js');
+const xivvi = require('./extra_modules/xivvi-common.js');
 
 module.exports = {
 	name: "flag",

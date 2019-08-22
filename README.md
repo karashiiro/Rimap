@@ -35,7 +35,7 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 
 `~disable <commandname>` - Disables a command.
 
-`~addclock <voice channel ID> <Linux-formatted timezone>` - Turns a voice channel into a clock. Timezones are listed under "TZ database name" [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+`~addclock <voice channel ID> <Linux-formatted timezone> [Timezone code]` - Turns a voice channel into a clock. Timezones are listed under "TZ database name" [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). You can optionally pass a custom timezone code (such as PST, GMT, ST, etc.) to be displayed instead of the default timezone code.
 
 `~deleteclock <voice channel ID>` - Smashes a clock.
 

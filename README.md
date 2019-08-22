@@ -65,41 +65,13 @@ Create a channel called `#reports` to handle that stuff, or disable the command 
 ## Installation
 (WIP)
 
-If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API, and an [XIVAPI key](https://xivapi.com/account).
+If you want to host a copy of Xivvi yourself, it's a little more involved. First, get a bot token from the [Discord Developer Portal](https://discordapp.com/developers/docs/intro) and install [Node.js](https://nodejs.org/en/). Also get yourself your four access keys from Twitter's REST API, and an [XIVAPI key](https://xivapi.com/account). You also need to install [Graphicsmagick.](http://www.graphicsmagick.org/) and [MongoDB.](https://docs.mongodb.com/manual/administration/install-community/)
 
-There's a fair number of commands to be run to install the node.js dependencies into your Xivvi folder, listed below:
+To run the server, just run the following commands in the install directory:
 
-`npm init` - Hit enter until it asks for your project file (default: index.js) and then set that to xivvi.js.
+`npm install`
 
-`npm i common-tags`
-
-`npm i config`
-
-`npm i cron`
-
-`npm i discord.js`
-
-`npm i @ffxiv-teamcraft/simulator`
-
-`npm i gm` - You also need to install [Graphicsmagick.](http://www.graphicsmagick.org/)
-
-`npm i moment`
-
-`npm i moment-timezone`
-
-`npm i mongodb` - Also install [MongoDB.](https://docs.mongodb.com/manual/administration/install-community/)
-
-`npm i request`
-
-`npm i request-promise`
-
-`npm i twitter`
-
-`npm i winston`
-
-`npm i winston-daily-rotate-file`
-
-`npm i xivapi-js`
+`node .`
 
 ### Configuration
 `common.bot_admin` should be your Discord ID.

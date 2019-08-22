@@ -19,8 +19,11 @@ module.exports = {
 		
 		const prefix = disConfig.get('prefix');
 		const guildID = message.guild.id;
+		
+		const timezoneCode = args[2] ? args[2].replace(/[^a-zA-Z]/g, "") : undefined;
 		const timezone = args[1].replace(/[^a-zA-Z_\/+0-9-]/g, "");
 		const channel = args[0].replace(/[^0-9]/g, "");
+		
 		const cronName = `updateTime.${guildID}.${channel}`;
 		
 		var guild = client.guilds.get(guildID);
@@ -60,7 +63,7 @@ module.exports = {
 		
 		var clockEmoji = minute < 30 ? clocks[hour - 1] : halfHourClocks[hour - 1];
 		
-		timeChannel.setName(clockEmoji + " " + now.format("h:mm A zz")).catch((e) => {
+		timeChannel.setName(clockEmoji + " " + now.format("h:mm A${!args[2] ? " zz" : ""}")${args[2] ? " + \" ${timezoneCode}\"" : ""}).catch((e) => {
 			logger.log("error", "File updateTime.${guildID}.${channel}.js threw an error: " + e.toString());
 		});
 	}

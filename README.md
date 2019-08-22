@@ -82,9 +82,9 @@ To run the server, just run the following commands using Command Prompt or Termi
 
 `discord.token` is your bot token.
 
-`discord.status_channel` is the channel you want Xivvi to tell you random information in.
+`discord.status_channel` is the channel you want Xivvi to tell you startup information and errors in.
 
-`discord.report_channel` is the channel you want Xivvi to send user reports to.
+`discord.report_channel` is the channel you want Xivvi to send user reports to. This isn't required if you `~disable report`.
 
 `discord.mod_roles` is an array of roles that can use the administrative commands like `~bulkdelete` etc.
 

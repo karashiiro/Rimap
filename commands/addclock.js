@@ -20,7 +20,7 @@ module.exports = {
 		const prefix = disConfig.get('prefix');
 		const guildID = message.guild.id;
 		const timezone = args[1].replace(/[^a-zA-Z_\/+0-9-]/g, "");
-		const channel = args[0].replace(/[^a-zA-Z]/g, "");
+		const channel = args[0].replace(/[^0-9]/g, "");
 		const cronName = `updateTime.${guildID}.${channel}`;
 		
 		var guild = client.guilds.get(guildID);

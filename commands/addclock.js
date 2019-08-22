@@ -17,6 +17,7 @@ module.exports = {
 		
 		if (!message.member.roles.some((roles) => mod_roles.includes(roles.name))) return;
 		
+		const prefix = disConfig.get('prefix');
 		const guildID = message.guild.id;
 		const timezone = args[1].replace(/[^a-zA-Z_\/+0-9-]/g, "");
 		const channel = args[0].replace(/[^a-zA-Z]/g, "");

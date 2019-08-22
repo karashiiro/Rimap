@@ -69,7 +69,7 @@ If you want to host a copy of Xivvi yourself, it's a little more involved. First
 
 To add the bot to your server, follow the directions under "How to Add the Bot to Your Server" on the [HowToGeek guide](https://www.howtogeek.com/364225/how-to-make-your-own-discord-bot/).
 
-To run the server, just run the following commands in the install directory:
+To run the server, just run the following commands using Command Prompt or Terminal in the install directory:
 
 `npm install`
 
